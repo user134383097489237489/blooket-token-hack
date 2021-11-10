@@ -6,11 +6,11 @@ async function getName(authToken) {
 };
 
 async function addCurrencies() {
-    const add_tokens = Number(prompt('How many tokens do you want to add to your account? (9999999999999999 daily)'));
+    const add_tokens = Number(prompt('How many tokens do you want to add to your account? (500 daily)'));
     const myToken = localStorage.token.split('JWT ')[1];
 
-    if (add_tokens > 9999999999999999) {
-        alert('You can add up to 9999999999999999 tokens daily.')
+    if (add_tokens > 500) {
+        alert('You can add up to 500 tokens daily.')
     }
 
     const response = await fetch('https://api.blooket.com/api/users/add-rewards', {
